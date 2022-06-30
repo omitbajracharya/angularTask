@@ -1,17 +1,2 @@
-<h1>App Component</h1>
 <app-navbar></app-navbar>
-<hr>
-<p>{{sub | uppercase}}</p> Training
-
-<!-- <button (click)=""></button> -->
-<input type="text" class="stringInterpolation" placeholder="{{val}}">   
-<input type="text" class="propertyBinding" [placeholder]="val">
-<input type="text" >
-
-<ul>
-  <li *ngFor="let val of list">{{val}}</li>
-</ul>
-
-<div *ngIf="test">
-  <p>Boolean data come if test value true...</p>
-</div>
+<router-outlet></router-outlet>

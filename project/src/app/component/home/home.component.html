@@ -1,1 +1,18 @@
-<p>home works!</p>
+<h1>Home Component</h1>
+
+<hr>
+<span>{{sub | sentenceCase:'Welcome':'To'}}</span> Training
+<br><br>
+<!-- <button (click)=""></button> -->
+<span>stringInterpolation:</span><input type="text" class="stringInterpolation" placeholder="{{val}}"><br><br>
+<span>Property Binding:</span><input type="text" class="propertyBinding" [placeholder]="val"><br><br>
+<br>
+<input type="text" [(ngModel)]="name"><br>
+<p>{{name}}</p>
+<ul>
+  <li *ngFor="let val of list">{{val}}</li>
+</ul>
+
+<div *ngIf="test">
+  <p>Boolean data come if test value true...</p>
+</div>
