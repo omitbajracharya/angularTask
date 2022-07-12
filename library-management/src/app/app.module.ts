@@ -10,13 +10,15 @@ import { AppComponent } from './app.component';
 // import { StudentPageComponent } from './component/librarian/student-page/student-page.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 // import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { ApiService } from './component/shared/api.service';
+import { ApiService } from './shared/api.service';
 // import { BookSearchComponent } from './component/librarian/book-search/book-search.component';
 
 // import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 // import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { DashpageComponent } from './component/dashpage/dashpage.component';
 import { SignupComponent } from './component/signup/signup.component';
+import { LoginComponent } from './component/login/login.component';
+import { ForgotPasswordComponent } from './component/forgot-password/forgot-password.component';
 // import { LibrarianModule } from './component/librarian/librarian.module';
 
 @NgModule({
@@ -28,7 +30,9 @@ import { SignupComponent } from './component/signup/signup.component';
     // BorrowRequestComponent,
     // StudentPageComponent,
     DashpageComponent,
-    SignupComponent 
+    SignupComponent,
+    LoginComponent,
+    ForgotPasswordComponent 
   ],
   imports: [
     BrowserModule,

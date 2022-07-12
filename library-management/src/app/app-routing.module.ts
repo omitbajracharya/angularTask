@@ -7,18 +7,26 @@ import { BorrowRequestComponent } from './component/librarian/borrow-request/bor
 // import { LibrarianComponent } from './component/librarian/librarian.component';
 import { StudentComponent } from './component/student/student.component';
 import { DashpageComponent } from './component/dashpage/dashpage.component';
+import { AuthGuard } from './guards/auth.guard';
+import { LoginComponent } from './component/login/login.component';
+import { ForgotPasswordComponent } from './component/forgot-password/forgot-password.component';
 
 
 const routes: Routes = [
-  {path:'',component:DashpageComponent},
+  {path:'login',component:LoginComponent},
+  {path:'forgot-password',component:ForgotPasswordComponent},
+  {path:'',canActivate: [AuthGuard],component:DashpageComponent},
+  {path:'dash-page',canActivate: [AuthGuard],component:DashpageComponent},
   // {path:'librarian-component',component: LibrarianComponent},
   // {path:'students-component',component:StudentComponent }
-  {path:'librarian',loadChildren:() => import('./component/librarian/librarian.module').then(mod => mod.LibrarianModule)},
-  {path:'students-component',component:StudentComponent }
+  {path:'librarian',canActivate: [AuthGuard],loadChildren:() => import('./component/librarian/librarian.module').then(mod => mod.LibrarianModule)},
+  {path:'students-component',canActivate: [AuthGuard],component:StudentComponent }
+  // ########
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes,{preloadingStrategy: PreloadAllModules})],
+  // imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
 

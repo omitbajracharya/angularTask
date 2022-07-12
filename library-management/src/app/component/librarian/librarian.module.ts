@@ -12,8 +12,9 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 // import { HttpLoaderFactory } from 'src/app/app.module';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-import { ApiService } from '../shared/api.service';
+import { ApiService } from '../../shared/api.service';
 import { LibnavComponent } from './libnav/libnav.component';
+import { DashpageComponent } from '../dashpage/dashpage.component';
 
 
 const routes: Routes = [
@@ -21,14 +22,13 @@ const routes: Routes = [
     path: '',
     component: LibrarianComponent,
     children: [
-      { path: 'add-book-inventory', component: AddBookInventoryComponent },
+      { path: 'home', component: AddBookInventoryComponent },
       { path: 'book-search', component: BookSearchComponent },
       { path: 'student-page', component: StudentPageComponent },
       { path: 'borrow-request', component: BorrowRequestComponent },
 
       //redirect to Librarian component
-      { path: '', redirectTo: '/librarian/add-book-inventory', pathMatch: 'full' },
-
+      { path: '', redirectTo: '/librarian/home', pathMatch: 'full' },
       // Setting up wildcard route for 404 page
       { path: '**', component: PagenotfoundComponent },
     ]

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { LibrarianModel } from '../librarian.model';
-import { ApiService } from 'src/app/component/shared/api.service';
+import { ApiService } from 'src/app/shared/api.service';
 import { Librarian } from '../model/librarian.interface';
 
 @Component({

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from 'src/app/shared/auth.service';
 
 @Component({
   selector: 'app-dashpage',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashpageComponent implements OnInit {
 
-  constructor() { }
+  constructor(private auth:AuthService) { }
 
   ngOnInit(): void {
   }
-
+  logout(){
+this.auth.logout();
+  }
 }

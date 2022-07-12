@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Librarian } from '../model/librarian.interface';
-import { ApiService } from 'src/app/component/shared/api.service';
+import { ApiService } from 'src/app/shared/api.service';
 import { NgForm } from '@angular/forms';
 import { StudentInterface } from '../student-page/student-interface';
 
